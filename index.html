@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Registration</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  }
+  .container {
+    background: #fff;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  }
+  h2 { text-align: center; margin-bottom: 20px; color: #333; }
+  label { display: block; margin: 12px 0 5px; color: #555; font-size: 14px; }
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  input:focus { outline: none; border-color: #833ab4; }
+  button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #833ab4;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover { background: #6a2c96; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>User Registration</h2>
+    <form action="submit.php" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="50" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" minlength="6" required>
+
+      <label for="mobile">Mobile</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
